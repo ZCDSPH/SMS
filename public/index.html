@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FREE SMS SPAMMER BY ZCDS PH</title>
+  <title>SMS BOMBER BY ZCDS PH</title>
   <style>
     body {
       font-family: 'Roboto', Arial, sans-serif;
-      background: url('https://i.ibb.co/9yV4Z3C/party-clouds.jpg') no-repeat center center/cover;
+      background: url('https://i.ibb.co/j8wrTMb/green-plants-under-full-moon.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,6 +15,7 @@
       margin: 0;
       padding: 20px;
       color: #ffffff;
+      text-transform: uppercase; 
     }
 
     .container {
@@ -32,9 +33,9 @@
     }
 
     .logo-title {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
-      color: #444;
+      color: #ffffff;
       margin-bottom: 25px;
     }
 
@@ -54,7 +55,7 @@
     input[type="number"] {
       width: calc(100% - 24px);
       padding: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 8px;
       font-size: 16px;
       color: #ffffff;
@@ -72,7 +73,7 @@
     button {
       background-color: rgba(255, 255, 255, 0.1);
       border: none;
-      color: white;
+      color: #ffffff;
       padding: 16px 24px;
       font-size: 16px;
       cursor: pointer;
@@ -121,25 +122,6 @@
       100% { transform: rotate(360deg); }
     }
 
-    .progress-container {
-      display: none;
-      width: 100%;
-      margin-top: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-    }
-
-    .progress-bar {
-      height: 20px;
-      width: 0%;
-      background-color: #ffffff;
-      border-radius: 8px;
-      transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    }
-
     .error-message {
       color: #ff6f61;
       margin-top: 15px;
@@ -159,21 +141,21 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo-title">SMS BMB</div>
+    <div class="logo-title">SMS Bomber</div>
     <form id="smsForm">
       <div class="input-container">
-        <label for="phoneNumber">TARGET NUMBER [ 09123456789 ]</label>
+        <label for="phoneNumber">Target Number</label>
         <input type="text" id="phoneNumber" name="number" placeholder="Enter target phone number" required>
       </div>
       <div class="input-container">
-        <label for="smsAmount">SMS COUNT [ 200 LIMIT ]</label>
+        <label for="smsAmount">SMS Count (20-200)</label>
         <input type="number" id="smsAmount" name="amount" value="20" min="20" max="200" placeholder="Enter SMS count" required>
       </div>
       <div class="input-container">
-        <label for="smsDelay">DELAY (ms)</label>
+        <label for="smsDelay">Delay (ms)</label>
         <input type="number" id="smsDelay" name="delay" value="1" min="1" max="5000" placeholder="Enter delay in milliseconds" required>
       </div>
-      <button type="submit" id="submitButton">SUBMIT</button>
+      <button type="submit" id="submitButton">Submit</button>
       <div class="spinner-container" id="spinnerContainer">
         <div class="spinner"></div>
       </div>
@@ -190,15 +172,15 @@
 
       document.getElementById('submitButton').style.display = 'none';
       document.getElementById('spinnerContainer').style.display = 'flex';
-      document.getElementById('responseMessage').textContent = 'ATTACKING THE NUMBER PLEASE WAIT';
+      document.getElementById('responseMessage').textContent = 'Attacking the number, please wait...';
 
       fetch('/send-sms?' + params)
         .then(response => response.text())
         .then(data => {
-          document.getElementById('responseMessage').textContent = 'ATTACKED SUCCESSFULLY';
+          document.getElementById('responseMessage').textContent = 'Attack successful!';
         })
         .catch(error => {
-          console.error('Error sending secure transmission:', error);
+          console.error('Error sending SMS:', error);
           document.getElementById('responseMessage').textContent = 'Error initiating attack.';
         })
         .finally(() => {
