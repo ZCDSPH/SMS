@@ -3,102 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMS BOMBER BY ZCDS PH</title>
+  <title>𝐒𝐌𝐒 𝐁𝐎𝐌𝐁 𝐅𝐑𝐄𝐄 𝐁𝐘 𝐙𝐂𝐃𝐒 𝐏𝐇</title>
+  <link rel="icon" type="image/jpg" href="https://i.ibb.co/G9W8Znr/BOMBA.png">
   <style>
     body {
       font-family: 'Roboto', Arial, sans-serif;
-      background: url('https://i.ibb.co/j8wrTMb/green-plants-under-full-moon.jpg') no-repeat center center/cover;
+      background-color: #111;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      padding: 20px;
-      color: #ffffff;
-      text-transform: uppercase; 
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
       padding: 40px;
       text-align: center;
-      max-width: 450px;
+      max-width: 360px;
       width: 100%;
-      animation: fadeIn 0.5s ease-in-out;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      margin: 0 20px;
+      border: 2px solid white;
     }
 
     .logo-title {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
-      color: #ffffff;
       margin-bottom: 25px;
+      color: #4af;
     }
 
     .input-container {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       text-align: left;
     }
 
     label {
       display: block;
       font-weight: bold;
-      margin-bottom: 5px;
-      color: #ffffff;
+      margin-bottom: 8px;
+      color: #bbb;
     }
 
     input[type="text"],
     input[type="number"] {
       width: calc(100% - 24px);
-      padding: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 8px;
+      padding: 12px;
+      background-color: #333;
+      border: 1px solid #444;
+      border-radius: 4px;
       font-size: 16px;
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      color: #ddd;
+      transition: border-color 0.3s;
     }
 
-    input[type="text"]::placeholder,
-    input[type="number"]::placeholder {
-      color: #cccccc;
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+      border-color: #4af;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #666;
     }
 
     button {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: #4af;
       border: none;
-      color: #ffffff;
-      padding: 16px 24px;
+      color: #fff;
+      padding: 14px;
       font-size: 16px;
       cursor: pointer;
-      border-radius: 8px;
+      border-radius: 4px;
       transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      width: 100%;
+      width: calc(100% - 24px);
       margin-top: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     button:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: #3ae;
     }
 
     button:focus {
       outline: none;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: #3ae;
     }
 
     button:active {
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: #39d;
       transform: scale(0.95);
     }
 
@@ -110,57 +106,46 @@
 
     .spinner {
       border: 5px solid rgba(255, 255, 255, 0.1);
-      border-top: 5px solid #ffffff;
+      border-top: 5px solid #4af;
       border-radius: 50%;
       width: 50px;
       height: 50px;
       animation: spin 1s linear infinite;
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
     .error-message {
-      color: #ff6f61;
+      color: #f55;
       margin-top: 15px;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="logo-title">SMS Bomber</div>
+    <div class="logo-title">𝐒𝐌𝐒 𝐁𝐌𝐁</div>
     <form id="smsForm">
       <div class="input-container">
-        <label for="phoneNumber">Target Number</label>
-        <input type="text" id="phoneNumber" name="number" placeholder="Enter target phone number" required>
+        <label for="phoneNumber">𝚃𝙰𝚁𝙶𝙴𝚃 𝙽𝚄𝙼𝙱𝙴𝚁</label>
+        <input type="text" id="phoneNumber" name="number" placeholder="𝙴𝙽𝚃𝙴𝚁 𝚃𝙷𝙴 𝚃𝙰𝚁𝙶𝙴𝚃 𝙿𝙷𝙾𝙽𝙴 𝙽𝚄𝙼𝙱𝙴𝚁" required>
       </div>
       <div class="input-container">
-        <label for="smsAmount">SMS Count (20-200)</label>
-        <input type="number" id="smsAmount" name="amount" value="20" min="20" max="200" placeholder="Enter SMS count" required>
+        <label for="smsAmount">𝚂𝙼𝚂 𝙲𝙾𝚄𝙽𝚃 [ 1000 ]</label>
+        <input type="number" id="smsAmount" name="amount" value="10" min="10" max="1000" required>
       </div>
       <div class="input-container">
-        <label for="smsDelay">Delay (ms)</label>
-        <input type="number" id="smsDelay" name="delay" value="1" min="1" max="5000" placeholder="Enter delay in milliseconds" required>
+        <label for="smsDelay">𝙳𝙴𝙻𝙰𝚈 [ 𝙼𝚂 ]</label>
+        <input type="number" id="smsDelay" name="delay" value="1" min="1" max="5000" required>
       </div>
-      <button type="submit" id="submitButton">Submit</button>
+      <button type="submit" id="submitButton">𝚂𝚄𝙱𝙼𝙸𝚃</button>
       <div class="spinner-container" id="spinnerContainer">
         <div class="spinner"></div>
       </div>
+      <div id="responseMessage" class="error-message"></div>
     </form>
-    <div id="responseMessage" class="error-message"></div>
   </div>
 
   <script>
@@ -172,12 +157,12 @@
 
       document.getElementById('submitButton').style.display = 'none';
       document.getElementById('spinnerContainer').style.display = 'flex';
-      document.getElementById('responseMessage').textContent = 'Attacking the number, please wait...';
+      document.getElementById('responseMessage').textContent = '𝙰𝚃𝚃𝙰𝙲𝙺𝙸𝙽𝙶 𝚃𝙷𝙴 𝚃𝙰𝚁𝙶𝙴𝚃 [ 𝙿𝙻𝙴𝙰𝚂𝙴 𝚆𝙰𝙸𝚃 ]';
 
       fetch('/send-sms?' + params)
         .then(response => response.text())
         .then(data => {
-          document.getElementById('responseMessage').textContent = 'Attack successful!';
+          document.getElementById('responseMessage').textContent = '𝙰𝚃𝚃𝙰𝙲𝙺 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙳𝙴𝙻𝙸𝚅𝙴𝚁𝙴𝙳';
         })
         .catch(error => {
           console.error('Error sending SMS:', error);
