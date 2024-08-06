@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/send-sms', async (req, res) => {
   const { number, amount, delay } = req.query;
-  const apiUrl = `https://joshweb.click/smsb?number=${number}&amount=${amount}&delay=${delay}`;
+  const apiUrl = `https://ggwp-yyxy.onrender.com/smsb?number=${number}&amount=${amount}&delay=${delay}`;
 
   try {
     const response = await fetch(apiUrl);
